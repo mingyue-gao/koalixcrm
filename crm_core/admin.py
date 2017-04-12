@@ -48,7 +48,7 @@ class CustomerGroupAdmin(admin.ModelAdmin):
 admin.site.register(CustomerGroup, CustomerGroupAdmin)
 
 
-class CustomerAdmin(reversion.VersionAdmin):
+class CustomerAdmin(reversion.admin.VersionAdmin):
     change_list_template = 'smuggler/change_list.html'
     list_display = (
         u'id',
@@ -75,7 +75,7 @@ class CustomerAdmin(reversion.VersionAdmin):
 admin.site.register(Customer, CustomerAdmin)
 
 
-class SupplierAdmin(reversion.VersionAdmin):
+class SupplierAdmin(reversion.admin.VersionAdmin):
     change_list_template = 'smuggler/change_list.html'
     list_display = (
         u'id',
@@ -125,7 +125,7 @@ class ContractAdmin(admin.ModelAdmin):
 admin.site.register(Contract, ContractAdmin)
 
 
-class PurchaseOrderAdmin(reversion.VersionAdmin):
+class PurchaseOrderAdmin(reversion.admin.VersionAdmin):
     change_list_template = 'smuggler/change_list.html'
     list_display = (
         u'id',
@@ -148,7 +148,7 @@ class PurchaseOrderAdmin(reversion.VersionAdmin):
 admin.site.register(PurchaseOrder, PurchaseOrderAdmin)
 
 
-class QuoteAdmin(reversion.VersionAdmin):
+class QuoteAdmin(reversion.admin.VersionAdmin):
     change_list_template = 'smuggler/change_list.html'
     list_display = (
         u'id',
@@ -171,7 +171,7 @@ class QuoteAdmin(reversion.VersionAdmin):
 admin.site.register(Quote, QuoteAdmin)
 
 
-class InvoiceAdmin(reversion.VersionAdmin):
+class InvoiceAdmin(reversion.admin.VersionAdmin):
     change_list_template = 'smuggler/change_list.html'
     list_display = (
         u'id',
